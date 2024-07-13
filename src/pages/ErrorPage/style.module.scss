@@ -1,0 +1,41 @@
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #d6d6d6;
+  text-align: center;
+  }
+
+
+.content {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  color: #4d015c;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  color: #4d015c;
+}
+
+.button {
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4d015c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover{
+    background-color: #4d015cb9;
+  }
+}

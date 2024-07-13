@@ -1,0 +1,16 @@
+.pageBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 4rem;
+
+    &>div>figure {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

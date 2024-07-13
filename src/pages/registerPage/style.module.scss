@@ -1,0 +1,19 @@
+.container__RegisterPage {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >div {
+        margin-top: 5rem;
+        width: 345px;
+    }
+
+    &>header {
+        padding: 0 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

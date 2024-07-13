@@ -1,0 +1,18 @@
+.boxInput,
+.boxSelect {
+    display: inline-flex;
+    align-items: center;
+
+    max-width: 20.5625rem;
+    min-height: 2.375rem;
+    padding: 0px 1rem;
+
+    border: 2px solid white;
+    border-radius: 4px;
+    color: var(--color-grey-1);
+    background-color: var(--color-grey-2);
+}
+
+.boxInput:focus {
+    border: 1px solid white;
+}

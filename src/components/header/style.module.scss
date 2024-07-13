@@ -1,0 +1,12 @@
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.header__btn {
+    max-width: 67px;
+    height: 40px;
+}

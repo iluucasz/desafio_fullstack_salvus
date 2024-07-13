@@ -1,0 +1,17 @@
+.container__ProductCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+    background-color: var(--color-grey-4);
+
+    div {
+        display: flex;
+        gap: 0.5rem;
+
+        button {
+            color: white;
+        }
+    }
+}

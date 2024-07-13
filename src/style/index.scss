@@ -1,0 +1,44 @@
+@import './global.scss';
+@import './typography.scss';
+@import './button.scss';
+@import './reset.scss';
+@import './inputAndSelect.scss';
+
+body {
+    color: white;
+    background-color: var(--color-grey-4);
+}
+
+.toast-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    height: 60px;
+    padding: 0.5rem;
+    border-radius: 4px;
+
+    color: var(--color-grey-0);
+    background-color: var(--color-grey-2);
+}
+
+.toast-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    height: 60px;
+    padding: 0.5rem;
+    border-radius: 4px;
+
+    color: var(--color-grey-0);
+    background-color: var(--color-grey-2);
+}
