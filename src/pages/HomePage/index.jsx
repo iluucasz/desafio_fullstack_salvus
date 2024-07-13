@@ -1,9 +1,8 @@
-import { LoginForm } from "../../components/form/loginForm";
 import logo from "../../assets/product.png";
+import { LoginForm } from "../../components/form/loginForm";
 import pageStyles from "../../style/modules/pageBox.module.scss";
 
 export const Home = () => {
-
     return (
         <>
             <main className={pageStyles.pageBox}>
@@ -14,8 +13,6 @@ export const Home = () => {
                     <LoginForm />
                 </div>
             </main>
-
         </>
     )
-
 }

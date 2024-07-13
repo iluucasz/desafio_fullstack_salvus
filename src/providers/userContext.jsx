@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
+import { jwtDecode } from "jwt-decode";
 import { createContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -21,13 +22,14 @@ export const UserProvider = ({ children }) => {
     const userLogin = async (payLoad, setLoading, reset) => {
         try {
             setLoading(true);
-            const { data } = await api.post("", payLoad);
+            const { data } = await api.post("users/login", payLoad);
             setUser(data.user)
             toast.success("Usuário logado com Sucesso!");
-            localStorage.setItem("@token", data.token);
+            localStorage.setItem("@token", data.AcessToken);
             navigate(state?.lastRoute ? state.lastRoute : pathname);
+
         } catch (error) {
-            if (error.response?.data.message == "Incorrect email / password combination") {
+            if (error.response?.data.message == "Email/Password invalid") {
                 toast.error("Email ou senha incorreto")
             }
         } finally {
@@ -39,7 +41,7 @@ export const UserProvider = ({ children }) => {
     const userRegister = async (payLoad, setLoading, reset) => {
         try {
             setLoading(true);
-            await api.post("", payLoad);
+            await api.post("users/register", payLoad);
             toast('Conta criada com sucesso');
             navigate("/");
         } catch (error) {
@@ -53,10 +55,12 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         const autoLogin = async () => {
             const token = localStorage.getItem("@token");
+
             try {
                 if (token) {
+                    const decoded = jwtDecode(token);
                     setLoading(true)
-                    const response = await api.get("", {
+                    const response = await api.get(`/users/${decoded.id}`, {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -72,7 +76,7 @@ export const UserProvider = ({ children }) => {
             }
         }
         autoLogin();
-    }, [])
+    }, [navigate, pathname])
 
     const userLogout = () => {
         localStorage.removeItem("@token");

@@ -1,6 +1,6 @@
 import { RegisterForm } from "../../components/form/registerForm";
-import pageStyles from "../../style/modules/pageBox.module.scss";
 import { Header } from "../../components/header";
+import pageStyles from "../../style/modules/pageBox.module.scss";
 import style from "./style.module.scss";
 
 export const RegisterPage = () => {
@@ -15,9 +15,7 @@ export const RegisterPage = () => {
                         </div>
                     </main>
                 </div>
-
             </div>
-
         </>
     )
 }

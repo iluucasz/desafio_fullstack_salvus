@@ -1,8 +1,8 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/prop-types */
 import { forwardRef } from "react";
-import style from "../loginForm/style.module.scss";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
+import style from "../loginForm/style.module.scss";
 
 export const Input = forwardRef(({ error, label, id, isHidden, setIsHidden, ...rest }, ref) => {
     return (

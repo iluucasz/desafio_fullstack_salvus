@@ -25,12 +25,26 @@ export const CreateProductModal = () => {
                 </div>
 
                 <div className={style.container__ModalCart}>
+
                     <InputCart
                         label="Nome"
                         placeholder="Digite o nome"
-                        id="title"
-                        {...register("title")}
-                        required
+                        id="name"
+                        {...register("name")}
+                    />
+
+                    <InputCart
+                        label="Descrição"
+                        placeholder="Digite a descrição"
+                        id="description"
+                        {...register("description")}
+                    />
+
+                    <InputCart
+                        label="Preço"
+                        placeholder="Digite o preço"
+                        id="price"
+                        {...register("price")}
                     />
 
                     <button type="submit" className="btn">Cadastrar Produto</button>

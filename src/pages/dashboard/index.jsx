@@ -16,7 +16,7 @@ export const Dashboard = () => {
                     <div className={style.line}></div>
                     <main>
                         <section className={style.dashboard__user}>
-                            <h2 className="title1">Olá, {user.name}</h2>
+                            <h2 className="title1">Olá {user.name}, Seja bem vindo !</h2>
                         </section>
                         <div className={style.line}></div>
                         <section className={style.dashboard__info}>
