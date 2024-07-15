@@ -11,7 +11,8 @@ export const productContext = createContext({});
 export const ProductProvider = ({ children }) => {
     const token = localStorage.getItem("@token");
 
-    const [productList, setProductList] = useState([]);
+    const [productList, setProductList] = useState(null);
+
     const [editList, setEditList] = useState(null);
     const [visibleModal, setVisibleModal] = useState(false);
 
@@ -30,10 +31,6 @@ export const ProductProvider = ({ children }) => {
             toast.error(error.message);
         }
     }, [token]);
-
-    useEffect(() => {
-        fetchProducts();
-    }, [fetchProducts]);
 
     const addProduct = async (payLoad) => {
         try {

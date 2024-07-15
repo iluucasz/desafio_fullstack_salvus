@@ -1,13 +1,21 @@
+import { useEffect, useContext } from 'react';
 import { ToastContainer } from "react-toastify";
-import { RouterMain } from "./routers/routerMain";
 import "react-toastify/dist/ReactToastify.css";
 import "../src/style/index.scss";
-import { useContext } from "react";
-import { userContext } from "./providers/userContext";
 import { Loading } from "./loading";
+import { userContext } from "./providers/userContext";
+import { RouterMain } from "./routers/routerMain";
+import { noSleepApi } from "./utils/noSleepApi";
 
 function App() {
+
+  useEffect(() => {
+    const apiURL = "https://desafio-fullstack-salvus-api.onrender.com/docs";
+    noSleepApi(apiURL);
+  }, []);
+
   const { loading } = useContext(userContext);
+
   return (
     <>
       {

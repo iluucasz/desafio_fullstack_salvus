@@ -3,13 +3,10 @@ import { Header } from "../../components/header";
 import { ProductList } from "../../components/productList";
 import { userContext } from "../../providers/userContext";
 import style from "./style.module.scss";
-import { productContext } from "../../providers/productContext";
-import loading_product from "../../assets/loading_product.gif";
 
 export const Dashboard = () => {
 
     const { user } = useContext(userContext);
-    const { productList } = useContext(productContext);
 
     return (
         <>
@@ -23,9 +20,7 @@ export const Dashboard = () => {
                         </section>
                         <div className={style.line}></div>
                         <section className={style.dashboard__info}>
-                            {
-                                productList ? <ProductList /> : <img src={loading_product} height={80} width={80} />
-                            }
+                            <ProductList />
                         </section>
                     </main>
                 </div>
