@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { jwtDecode } from "jwt-decode";
@@ -76,7 +77,7 @@ export const UserProvider = ({ children }) => {
             }
         }
         autoLogin();
-    }, [navigate, pathname])
+    }, [])
 
     const userLogout = () => {
         localStorage.removeItem("@token");
